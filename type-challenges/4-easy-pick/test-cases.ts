@@ -7,6 +7,7 @@ type cases = [
   MyPick<Todo, "title" | "completed" | "invalid">
 ];
 
+// "title" | "completed" | "invalid" ts中 叫 联合类型 union
 interface Todo {
   title: string;
   description: string;

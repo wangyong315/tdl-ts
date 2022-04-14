@@ -2,8 +2,6 @@ type MyReadonly<T> = {
   readonly [P in keyof T]: T[P];
 };
 
-
-
 // js
 function readonly(obj) {
   const result = {};

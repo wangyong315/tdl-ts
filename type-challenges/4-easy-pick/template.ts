@@ -1,21 +1,25 @@
 // ts 联合类型 union
 
+// T K 泛型
+// T 代表 整个大对象
+// K 代表 对象 keys 的集合
+
 type MyPick<T, K extends keyof T> = {
-  [P in K]: T[P];
-};
+  [P in K]: T[P]
+}
+
+// [P in K] 遍历一个联合类型
 
 // js
 // 对比学习法
 function myPick(todo, keys) {
-  const obj = {};
-
-  keys.forEach((key) => {
-    if (key in todo) {
-      obj[key] = todo[key];
+  const obj = {}
+  keys.forEach(key => {
+    if(key in todo) {
+      obj[key] = todo[key]
     }
-  });
-
-  return obj;
+  })
+  return obj
 }
 
 // 涉及到的知识点

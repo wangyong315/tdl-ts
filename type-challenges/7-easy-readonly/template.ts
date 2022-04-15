@@ -1,6 +1,9 @@
 type MyReadonly<T> = {
-  readonly [P in keyof T]: T[P];
-};
+  readonly [P in keyof T]: T[P]
+}
+
+// 遍历一个 接口 [P in keyof T]
+// 遍历一个联合类型 [P in K]
 
 // js
 function readonly(obj) {

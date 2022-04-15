@@ -7,6 +7,10 @@ const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 // keyof array -> 索引
 type r = TupleToObject<typeof tuple>;
 
+// 遍历一个 数组  [P in T[number]]
+// 遍历一个 union [P in T]
+// 遍历一个 接口 [P in keyof T]
+
 // js
 function tupleToObject(array) {
   const obj = {};
